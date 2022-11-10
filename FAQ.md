@@ -67,6 +67,12 @@ If your client is <2.3.3, remove `tls-version-min 1.2` from your `/etc/openvpn/s
 
 ---
 
+**Q:** IPv6 is not working on my Hetzner VM
+
+**A:** This an issue on their side. See <https://angristan.xyz/fix-ipv6-hetzner-cloud/>
+
+---
+
 **Q:** DNS is not working on my Linux client
 
 **A:** See "How do I fix DNS leaks?" question

@@ -7,7 +7,7 @@ name: Test
 jobs:
   install:
     runs-on: ubuntu-latest
-    if: github.repository == 'hichemdalleji/openvpn-korsgy' && github.actor == 'hichemdalleji'
+    if: github.repository == 'angristan/openvpn-install' && github.actor == 'angristan'
     strategy:
       matrix:
         os-image:
@@ -81,7 +81,7 @@ jobs:
           host: ${{ steps.server_ip.outputs.value }}
           username: root
           key: ${{ secrets.SSH_KEY }}
-          script: set -x && git clone https://github.com/hichemdalleji/openvpn-korsgy.git && cd openvpn-install && git checkout ${{ github.event.pull_request.head.sha }}
+          script: set -x && git clone https://github.com/angristan/openvpn-install.git && cd openvpn-install && git checkout ${{ github.event.pull_request.head.sha }}
 
       - name: Run openvpn-install.sh in headless mode
         uses: appleboy/ssh-action@v0.1.4
